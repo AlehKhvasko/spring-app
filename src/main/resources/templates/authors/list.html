@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Authors list</title>
+</head>
+<body>
+<div class="row justify-content-left">
+  <div class="col-auto">
+    <table class="table table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">first name</th>
+          <th scope="col">last name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="author: ${authors}">
+          <th scope="row" th:text="${author.id}"></th>
+          <td th:text="${author.firstName}"></td>
+          <td th:text="${author.lastName}"></td>
+        </tr>
+        </tbody>
+      </table>
+    </table>
+  </div>
+</div>
+</body>
+</html>
